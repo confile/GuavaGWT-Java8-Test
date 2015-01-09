@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Custom-built GWT. You probably want to uncomment the DOCTYPE and point it to your GWT checkout
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 0.0.0//EN" "file:///path/to/gwt/checkout/distro-source/core/src/gwt-module.dtd">
+-->
+<module rename-to='test2'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name='com.google.gwt.core.Core'/>
+    	<inherits name='com.google.gwt.inject.Inject' />
+	<inherits name='com.google.gwt.resources.Resources' />
+	<inherits name='com.google.gwt.editor.Editor' />
+	<inherits name="com.google.gwt.http.HTTP"/>
+	
+
+		<!-- Guava does not compile-->
+	<inherits name="com.google.common.collect.Collect"/>
+
+	
+	
+<!-- 		<inherits name="com.gwtplatform.dispatch.rpc.DispatchRpc"/> -->
+<!-- 	<inherits name="com.gwtplatform.dispatch.rest.DispatchRestShared"/>  -->
+<!-- 	<inherits name="com.gwtplatform.dispatch.rest.DispatchRest"/> -->
+	
+	    <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
+   
+ 
+
+
+  <!-- Specify the app entry point class.                         -->
+<!--   <entry-point class='test.client.Test2'/> -->
+
+	<extend-configuration-property name="gin.ginjector.modules"
+		     						value="test.client.gin.ClientModule"/>
+
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+
+  <!-- allow Super Dev Mode -->
+  <add-linker name="xsiframe"/>
+</module>
